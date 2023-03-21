@@ -1,0 +1,51 @@
+.footer-auth {
+  background-color: transparent;
+
+  &__footer {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 16px 0;
+  }
+
+  &__item {
+    line-height: 16px;
+    color: $gray900;
+    cursor: pointer;
+    font: {
+      family: "SF Pro Display", sans-serif;
+      weight: 300;
+      size: 14px;
+      style: normal;
+    }
+    margin-right: 10px;
+
+    & path {
+      fill: $gray900;
+    }
+
+    &--active {
+      color: $gray500;
+    }
+
+    &-icon {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    &__item {
+      color: $white0;
+
+      & path {
+        fill: $white0;
+      }
+    }
+  }
+}

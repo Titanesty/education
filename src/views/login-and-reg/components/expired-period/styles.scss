@@ -1,0 +1,28 @@
+.success-form-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 56px;
+    background-color: $gray50;
+    border-radius: 50%;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $gray900;
+    margin-bottom: 40px;
+    font: {
+      family: "SF Pro Display", sans-serif;
+      size: 22px;
+      weight: 900;
+    }
+  }
+}

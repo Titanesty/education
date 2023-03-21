@@ -1,0 +1,52 @@
+.drop-down-user {
+  padding: 12px;
+  background: $white0;
+  border-radius: 9px;
+  filter: drop-shadow(6px 8px 32px rgba(25, 36, 54, 0.14));
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    padding: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-top: 24px;
+      position: relative;
+
+      &:after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        background-color: $gray300;
+        border-radius: 1px;
+        width: calc(100% + 24px);
+      }
+    }
+
+    &:hover {
+      background: $gray50;
+    }
+  }
+
+  &__rectangle {
+    position: absolute;
+    top: -7px;
+    left: 24px;
+    width: 16px;
+    height: 16px;
+    background-color: $white0;
+    transform: rotate(-45deg);
+    z-index: 1;
+  }
+}

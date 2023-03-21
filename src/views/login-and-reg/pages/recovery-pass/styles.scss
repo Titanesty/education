@@ -1,0 +1,161 @@
+.recovery {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: $white0;
+    position: relative;
+    z-index: 3;
+    padding: 15px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      background-color: $gray50;
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+
+    &-title {
+      line-height: 24px;
+      letter-spacing: 1px;
+      color: $gray900;
+      font: {
+        family: "SF Pro Display", sans-serif;
+        weight: 600;
+        style: normal;
+        size: 16px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+
+    &-title {
+      margin-bottom: 13px;
+      line-height: 32px;
+      letter-spacing: 1px;
+      color: $gray900;
+      font: {
+        family: "SF Pro Display", sans-serif;
+        size: 22px;
+        weight: 700;
+      }
+    }
+
+    &-desc {
+      margin-bottom: 40px;
+    }
+
+    &-input {
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &-back {
+      cursor: pointer;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: $gray900;
+      font: {
+        family: "SF Pro Display", sans-serif;
+        size: 14px;
+        weight: 600;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    & {
+      background: bottom / cover no-repeat url("@/assets/images/background.png");
+      padding: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 472px;
+    }
+
+    &__wrapper {
+      overflow: hidden;
+      border-radius: 19px;
+      height: auto;
+    }
+
+    &__header {
+      padding: 0;
+      margin: 0;
+
+      &:before {
+        content: none;
+      }
+
+      &-title {
+        display: none;
+      }
+
+      &-icon {
+        position: absolute;
+        right: -27px;
+        top: -27px;
+      }
+    }
+
+    &__inner {
+      padding: 28px 48px 38px;
+      overflow-y: auto;
+      border-radius: 19px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.header-auth {
+  width: 100%;
+  margin-bottom: 46px;
+  padding: 0 8px;
+
+  @media screen and (min-width: $screen-sm) {
+    & {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__sign-in-link {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      background: #ffffff;
+      border-radius: 5px;
+      padding: 16px 18px;
+    }
+  }
+}

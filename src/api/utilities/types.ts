@@ -1,0 +1,3 @@
+interface IDefaultOptions {
+  baseURL: string;
+}

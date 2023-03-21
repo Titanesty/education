@@ -1,0 +1,11 @@
+.social {
+    width: 100%;
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 24px;
+    }
+}
